@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverTap Web SDK Test</title>
+    <script type="text/javascript">
+var clevertap = {event:[], profile:[], region : 'us1', account:[], onUserLogin:[], notifications:[], privacy:[]};
+        clevertap.account.push({ "id": "TEST-75W-9R6-9R7Z" }, "us1", "clevertap-prod.com");
+          clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+        clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+          (function () {
+        var wzrk = document.createElement('script');
+        wzrk.type = 'text/javascript';
+        wzrk.async = true;
+        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wzrk, s);
+          })();
+  </script>
+</head>
+<body>
+    <h1>CleverTap Web SDK Test</h1>
+    <p>Verifique o console do navegador para logs de inicialização do CleverTap.</p>
+</body>
+</html>
